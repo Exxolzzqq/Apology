@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TOP SECRET 🐱</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:#08080c;
+    color:white;
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+.screen{
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+}
+
+.active{
+    display:flex;
+}
+
+.box{
+    width:95%;
+    max-width:650px;
+    background:rgba(20,20,28,.94);
+    border:1px solid #ff4f81;
+    border-radius:25px;
+    padding:35px 25px;
+    box-shadow:0 0 50px rgba(255,79,129,.25);
+}
+
+h1{
+    font-size:34px;
+}
+
+p{
+    font-size:19px;
+    line-height:1.6;
+}
+
+button{
+    border:0;
+    border-radius:50px;
+    padding:15px 30px;
+    margin:10px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.mainBtn{
+    background:#ff477e;
+    color:white;
+    box-shadow:0 0 25px #ff477e;
+}
+
+.mainBtn:hover{
+    transform:scale(1.08);
+}
+
+.cat{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+    margin:15px;
+}
+
+.red{
+    color:#ff477e;
+}
+
+.small{
+    opacity:.6;
+    font-size:13px;
+}
+
+#no{
+    background:#333;
+    color:white;
+}
+
+.heart{
+    position:fixed;
+    pointer-events:none;
+    animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-50px) rotate(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.shake{
+    animation:shake .4s infinite;
+}
+
+@keyframes shake{
+    0%{transform:rotate(-2deg)}
+    50%{transform:rotate(2deg)}
+    100%{transform:rotate(-2deg)}
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- SCREEN 1 -->
+
+<section class="screen active" id="s1">
+
+<div class="box">
+
+<p class="small">⚠️ CLASSIFIED INFORMATION ⚠️</p>
+
+<h1>🔐 TOP SECRET</h1>
+
+<p>
+ეს გვერდი განკუთვნილია მხოლოდ
+<br>
+<strong>ერთი განსაკუთრებული გოგოსთვის.</strong>
+</p>
+
+<p>
+გთხოვ, დააჭირე ღილაკს მხოლოდ მაშინ,
+თუ მზად ხარ სიმართლის გასაგებად...
+</p>
+
+<button class="mainBtn" onclick="next(1)">
+OPEN FILE 🔓
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 2 -->
+
+<section class="screen" id="s2">
+
+<div class="box">
+
+<p class="small">CASE FILE #001</p>
+
+<h1>🐱 საგანგებო მდგომარეობა</h1>
+
+<img class="cat"
+src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80">
+
+<p>
+ეს კატა უკვე <span class="red">ძალიან მოწყენილია.</span>
+</p>
+
+<p>
+მიზეზი:
+<br>
+<strong>შენ ისევ ნაწყენი ხარ. 😭</strong>
+</p>
+
+<button class="mainBtn" onclick="next(2)">
+შემდეგი მტკიცებულება →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 3 -->
+
+<section class="screen" id="s3">
+
+<div class="box">
+
+<p class="small">DAY 2 — SITUATION GETTING WORSE</p>
+
+<img class="cat"
+src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=700&q=80">
+
+<h1>😭 უკვე ესეც ტირის</h1>
+
+<p>
+კატამ განაცხადა:
+</p>
+
+<p class="red">
+„გთხოვ, შეურიგდი...  
+მე აღარ შემიძლია ამის ყურება.“ 🥺
+</p>
+
+<button class="mainBtn" onclick="next(3)">
+კატის მდგომარეობის ნახვა
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 4 -->
+
+<section class="screen" id="s4">
+
+<div class="box">
+
+<p class="small">🚨 CRITICAL LEVEL 🚨</p>
+
+<img class="cat shake"
+src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=700&q=80">
+
+<h1>💔 კრიტიკული მდგომარეობა</h1>
+
+<p>
+კატამ უკვე დაკარგა ცხოვრების აზრი.
+</p>
+
+<p>
+ამბობს, რომ სანამ შენ არ შეურიგდები,
+<br>
+<strong>საჭმელს აღარ შეჭამს.</strong>
+</p>
+
+<p class="small">
+(კარგი, ეს ალბათ ტყუილია, მაგრამ მაინც 😭)
+</p>
+
+<button class="mainBtn" onclick="next(4)">
+ბოლო ფაილის გახსნა 🔐
+</button>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="screen" id="s5">
+
+<div class="box">
+
+<p class="small">FINAL REPORT</p>
+
+<h1>🐱🐱🐱</h1>
+
+<h1>
+კატის საბჭომ მიიღო გადაწყვეტილება.
+</h1>
+
+<p>
+ყველა კატა ერთხმად აცხადებს:
+</p>
+
+<h1 class="red">
+„შეურიგდი მას.“ ❤️
+</h1>
+
+<p>
+რადგან ერთი ბიჭი ახლა აქ ზის და
+სრულიად გულწრფელად ამბობს:
+</p>
+
+<h2>
+„მართლა ვწუხვარ. 🥺
+<br>
+არ მინდოდა შენი გაწყენინება.“
+</h2>
+
+<p>
+ახლა კი ყველაზე მნიშვნელოვანი კითხვა:
+</p>
+
+<h1>მაპატიებ? ❤️</h1>
+
+<button class="mainBtn" onclick="yes()">
+კი ❤️
+</button>
+
+<button id="no" onclick="nope()">
+ჯერ არა 😒
+</button>
+
+<p id="reply"></p>
+
+</div>
+
+</section>
+
+
+<script>
+
+function next(current){
+
+    document.getElementById("s"+current)
+    .classList.remove("active");
+
+    document.getElementById("s"+(current+1))
+    .classList.add("active");
+}
+
+
+let clicks=0;
+
+function nope(){
+
+    clicks++;
+
+    const button=document.getElementById("no");
+    const reply=document.getElementById("reply");
+
+    const texts=[
+        "კატამ ეს პასუხი არ მოიწონა. 🥺",
+        "კიდევ ერთხელ დაფიქრდი... 🐱",
+        "მეორე კატაც გთხოვს... 😭",
+        "უკვე მთელი კატების საბჭო გთხოვს. 💔",
+        "კარგი, აღარ გაწუხებ... უბრალოდ ძალიან მენატრები. ❤️"
+    ];
+
+    reply.innerHTML=texts[Math.min(clicks-1,4)];
+
+    button.style.transform=
+    `translate(${Math.random()*160-80}px,
+               ${Math.random()*80-40}px)`;
+}
+
+
+function yes(){
+
+    document.querySelector(".box").innerHTML=`
+
+        <h1>🚨 SYSTEM OVERLOAD 🚨</h1>
+
+        <h2>კატებმა გაიგეს შენი პასუხი.</h2>
+
+        <img class="cat"
+        src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80">
+
+        <h1 class="red">
+        MISSION ACCOMPLISHED ❤️
+        </h1>
+
+        <p>
+        ერთი ბიჭი ახლა ოფიციალურად
+        ყველაზე ბედნიერი ადამიანია. 🥹
+        </p>
+
+        <h2>
+        ❤️🐱❤️🐱❤️🐱❤️
+        </h2>
+
+    `;
+
+    for(let i=0;i<100;i++){
+
+        setTimeout(()=>{
+
+            const heart=document.createElement("div");
+
+            heart.className="heart";
+
+            heart.innerHTML=
+            ["❤️","💗","💖","🐱","💕"][Math.floor(Math.random()*5)];
+
+            heart.style.left=Math.random()*100+"vw";
+            heart.style.fontSize=
+            15+Math.random()*35+"px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>heart.remove(),4000);
+
+        },i*30);
+    }
+}
+
+</script>
+
+</body>
+</html>
